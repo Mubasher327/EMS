@@ -1,10 +1,7 @@
 package com.ems.emploee.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 
-
-public class salary {
+public class Salary {
     private String sal_id;
     private float amount;
     private float annual;

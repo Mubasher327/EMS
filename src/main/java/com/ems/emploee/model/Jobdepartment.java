@@ -1,9 +1,6 @@
 package com.ems.emploee.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-
-public class jobdepartment {
+public class Jobdepartment {
 
     private String job_id;
     private String name;
