@@ -1,11 +1,10 @@
 package com.ems.emploee.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
+@Data
 @Table(name="attendance")
 public class Attendance {
     @Id
@@ -13,6 +12,8 @@ public class Attendance {
     @Column private int empl_present;
     @Column private int emply_abscent;
     @Column private float atte_count;
+    @ManyToOne @JoinColumn (name="empl_id")
+    private Employee employ;
 
 
 }
