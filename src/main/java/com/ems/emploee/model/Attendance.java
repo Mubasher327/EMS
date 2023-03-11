@@ -8,10 +8,12 @@ import lombok.Data;
 @Table(name="attendance")
 public class Attendance {
     @Id
-    @Column private String atten_id;
+    @Column private int atten_id;
     @Column private int empl_present;
+    @Column private float time_in;
+    @Column private float time_out;
     @Column private int empl_abscent;
-    @Column private float atte_count;
+
     @ManyToOne @JoinColumn (name="empl_id")
     private Employee employ;
 

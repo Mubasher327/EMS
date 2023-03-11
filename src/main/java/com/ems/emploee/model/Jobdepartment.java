@@ -15,7 +15,7 @@ public class Jobdepartment {
     @Column private String depart_name;
     @Column private String description;
     @Column private float salary_range;
-    @OneToMany @JoinColumn(name="emply_id")
+    @OneToMany
     private List<Employee>employ_list;
 
 
