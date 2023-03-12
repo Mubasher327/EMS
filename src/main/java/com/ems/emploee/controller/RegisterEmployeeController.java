@@ -20,9 +20,15 @@ public class RegisterEmployeeController {
 {
         registeredEmployeeServices.updateEmployee(employee);
     }
-@DeleteMapping("/delete/{empl_id}")
-    public void deleteEmployee(@RequestParam("empl_id") int empl_id){
-        registeredEmployeeServices.deleteEmployee(empl_id);
+@DeleteMapping("/delete/{id}")
+    public String deleteEmployee(@PathVariable("id") int empl_id){
+       return registeredEmployeeServices.deleteEmployee(empl_id);
 }
+
+@GetMapping("/getById/{id}")
+    public Employee getEmployee(@PathVariable("id") int empl_id){
+        return registeredEmployeeServices.getEmployee(empl_id);
+}
+
 
 }

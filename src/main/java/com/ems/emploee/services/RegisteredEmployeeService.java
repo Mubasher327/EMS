@@ -19,8 +19,14 @@ registeremployeeRepo.save(employee);
 
  }
 
- public void deleteEmployee(int empl_id){
+ public String deleteEmployee(int empl_id){
   registeremployeeRepo.deleteById(empl_id);
+  return "Deleted";
+ }
+
+ public Employee getEmployee(int empl_id){
+  Employee employee=registeremployeeRepo.findById(empl_id).get();
+  return employee;
  }
 
 }

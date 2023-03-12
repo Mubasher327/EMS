@@ -20,7 +20,7 @@ public class Employee {
     @Column private String designation;
     @Column private double salary;
     @ManyToOne @JoinColumn (name="depart_id")
-    private Jobdepartment depart;
+    private Department depart;
     @OneToMany
     private List<Attendance>attendanceList;
 

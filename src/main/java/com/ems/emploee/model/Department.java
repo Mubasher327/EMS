@@ -7,16 +7,19 @@ import java.util.List;
 
 @Entity
 @Data
-@Table(name = "jobdepartment")
-public class Jobdepartment {
+@Table(name = "department")
+public class Department {
 
-    @Id @Column
-    private String depart_id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column
+    private int depart_id;
     @Column private String depart_name;
     @Column private String description;
-    @Column private float salary_range;
+    @Column private double salary_range;
     @OneToMany
     private List<Employee>employ_list;
+    
 
 
 }
